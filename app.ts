@@ -1,11 +1,12 @@
-type StrOrNum = number | string;
-let totalCost:number;
-let orderId: StrOrNum;
+type StringOrNum = string | number;
+let itemPrice: number;
 
-const calculateTotalCost = (price: StrOrNum, qty: number):void  =>{
-
+const setItemPrice = (price: StringOrNum):void => {
+	if (typeof price === 'string') {
+		itemPrice = 0;
+	} else {
+		itemPrice = price
+	}
 }
 
-const findOrderId = (customer : {customerId: StrOrNum, nume: string}, productId: StrOrNum): StrOrNum => {
-	return orderId
-} 
+setItemPrice(50);

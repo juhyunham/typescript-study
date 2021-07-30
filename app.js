@@ -1,8 +1,11 @@
 "use strict";
-var totalCost;
-var orderId;
-var calculateTotalCost = function (price, qty) {
+var itemPrice;
+var setItemPrice = function (price) {
+    if (typeof price === 'string') {
+        itemPrice = 0;
+    }
+    else {
+        itemPrice = price;
+    }
 };
-var findOrderId = function (customer, productId) {
-    return orderId;
-};
+setItemPrice(50);
